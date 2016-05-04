@@ -6,12 +6,11 @@ class CreateInfluencerAuthorizations < ActiveRecord::Migration
       t.text :oauth_token, null: false
       t.text :meta
       t.integer :influencer_id, null: false
-      t.integer :social_account_id, null: false
+      t.string :social_account
       t.datetime :deleted_at
       t.timestamps null: false
     end
 
     add_index :influencer_authorizations, :influencer_id
-    add_index :influencer_authorizations, :social_account_id
   end
 end

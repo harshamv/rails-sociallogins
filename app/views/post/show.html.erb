@@ -1,0 +1,28 @@
+<% if @post_details["full_picture"].present? %>
+  <%= image_tag @post_details["full_picture"] %>
+<% end %>
+<br>
+<% if @post_details["message"].present? %>
+  <%= image_tag @post_details["message"] %>
+<% end %>
+<br><br>
+
+Likes:
+<% if @post_details["likes"]["summary"]["total_count"].present? %>
+  <%= image_tag @post_details["likes"]["summary"]["total_count"] %>
+<% end %>
+
+<br>
+Comments:
+<% if @post_details["comments"]["summary"]["total_count"].present? %>
+  <%= image_tag @post_details["comments"]["summary"]["total_count"] %>
+<% end %>
+<br>
+
+Shares:
+<% if @post_details["shares"].present? %>
+  <%= image_tag @post_details["shares"]["count"] %>
+<% else %>
+0
+<% end %>
+<br>

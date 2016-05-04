@@ -1,0 +1,39 @@
+<h3>List of Influencers</h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Current Location</th>
+    <th colspan="2">Actions</th>
+  </tr>
+
+  <% @influencers.each do |influencer| %>
+    <tr>
+      <td>
+        <% if influencer.profile_picture_url.present? %>
+          <%= image_tag influencer.profile_picture_url %>
+          <br/>
+        <% end %>
+        <%= influencer.first_name %> <%= influencer.last_name %>
+      </td>
+      <td><%= influencer.email %></td>
+      <td><%= influencer.location %></td>
+      <td><%= link_to 'Add POST', post_new_path(influencer) %></td>
+      <td><%= link_to 'View POSTs', post_index_path(influencer) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<style>
+  table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      width:100%;
+  }
+  th, td {
+      padding: 15px;
+      text-align: center;
+      font-weight: normal;
+  }
+</style>

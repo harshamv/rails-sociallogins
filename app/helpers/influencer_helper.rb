@@ -1,0 +1,2 @@
+module InfluencerHelper
+end

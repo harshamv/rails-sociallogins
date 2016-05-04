@@ -1,0 +1,9 @@
+<h3>Add a new facebook post - <%= @influencer.first_name %> <%= @influencer.last_name %></h3>
+
+<form enctype="multipart/form-data" action="/influencer/<%= @influencer.id %>/post/create" method="post">
+     <input type="text" name="message" placeholder="Caption"/>
+     <br><br>
+     <input type="text" name="source" placeholder="File URL" value="http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/img_01.jpg"/>
+     <br><br>
+     <input type="submit" value="Post to Facebook" />
+ </form>

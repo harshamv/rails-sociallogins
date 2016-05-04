@@ -17,19 +17,18 @@ ActiveRecord::Schema.define(version: 20160419182936) do
   enable_extension "plpgsql"
 
   create_table "influencer_authorizations", force: :cascade do |t|
-    t.string   "provider",          null: false
-    t.string   "provider_uid",      null: false
-    t.text     "oauth_token",       null: false
+    t.string   "provider",       null: false
+    t.string   "provider_uid",   null: false
+    t.text     "oauth_token",    null: false
     t.text     "meta"
-    t.integer  "influencer_id",     null: false
-    t.integer  "social_account_id", null: false
+    t.integer  "influencer_id",  null: false
+    t.string   "social_account"
     t.datetime "deleted_at"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "influencer_authorizations", ["influencer_id"], name: "index_influencer_authorizations_on_influencer_id", using: :btree
-  add_index "influencer_authorizations", ["social_account_id"], name: "index_influencer_authorizations_on_social_account_id", using: :btree
 
   create_table "influencers", force: :cascade do |t|
     t.string   "first_name",                                   null: false
