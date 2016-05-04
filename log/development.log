@@ -1,0 +1,148 @@
+  [1m[36m (67.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (72.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMembers (20160303085323)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (103.9ms)[0m  [1mCREATE TABLE "members" ("id" serial primary key, "name" character varying NOT NULL, "profile_picture_url" character varying, "email" character varying NOT NULL, "phone" character varying, "company_id" integer, "role" character varying DEFAULT 'admin' NOT NULL, "time_zone_name" character varying DEFAULT 'Asia/Kolkata' NOT NULL, "status" integer DEFAULT 1 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (62.9ms)[0m  CREATE UNIQUE INDEX  "index_members_on_email" ON "members"  ("email")
+  [1m[36m (42.4ms)[0m  [1mCREATE  INDEX  "index_members_on_company_id" ON "members"  ("company_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303085323"]]
+  [1m[36m (24.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20160303090154)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (100.9ms)[0m  [1mCREATE TABLE "companies" ("id" serial primary key, "name" character varying NOT NULL, "slug" character varying NOT NULL, "logo_url" character varying, "address" character varying, "phone" character varying, "time_zone_name" character varying DEFAULT 'Asia/Kolkata' NOT NULL, "company_type" character varying NOT NULL, "status" integer DEFAULT 1 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303090154"]]
+  [1m[36m (27.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20160303091725)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (101.2ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying NOT NULL, "slug" character varying NOT NULL, "icon_large_url" character varying NOT NULL, "icon_medium_url" character varying NOT NULL, "icon_small_url" character varying NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303091725"]]
+  [1m[36m (27.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBrands (20160303091847)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (108.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS hstore[0m
+  [1m[35m (105.1ms)[0m  CREATE TABLE "brands" ("id" serial primary key, "name" character varying NOT NULL, "slug" character varying NOT NULL, "logo_url" character varying, "description" text, "website" character varying, "social_accounts" hstore, "company_id" integer NOT NULL, "is_verified" boolean DEFAULT 'f' NOT NULL, "status" integer DEFAULT 1 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (53.8ms)[0m  [1mCREATE  INDEX  "index_brands_on_company_id" ON "brands"  ("company_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303091847"]]
+  [1m[36m (28.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCampaigns (20160303092434)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS hstore[0m
+  [1m[35m (144.3ms)[0m  CREATE TABLE "campaigns" ("id" serial primary key, "name" character varying NOT NULL, "slug" character varying NOT NULL, "cover_photo_url" character varying, "brief" character varying, "goal" text, "outbound_link" character varying, "social_accounts" hstore, "hashtags" text[] DEFAULT '{}', "dos" text[] DEFAULT '{}', "donts" text[] DEFAULT '{}', "age_range" hstore, "gender" character varying, "influencer_interests" text[] DEFAULT '{}', "creative_type" character varying, "brand_id" integer NOT NULL, "objective_id" integer NOT NULL, "company_id" integer NOT NULL, "token" character varying NOT NULL, "is_approved" boolean DEFAULT 'f' NOT NULL, "status" integer DEFAULT 1 NOT NULL, "start_date" timestamp, "end_date" timestamp, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (51.4ms)[0m  [1mCREATE  INDEX  "index_campaigns_on_brand_id" ON "campaigns"  ("brand_id")[0m
+  [1m[35m (62.7ms)[0m  CREATE  INDEX  "index_campaigns_on_objective_id" ON "campaigns"  ("objective_id")
+  [1m[36m (53.4ms)[0m  [1mCREATE  INDEX  "index_campaigns_on_company_id" ON "campaigns"  ("company_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303092434"]]
+  [1m[36m (27.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInfluencers (20160303094821)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (203.2ms)[0m  [1mCREATE TABLE "influencers" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying, "username" character varying, "profile_picture_url" character varying, "email" character varying, "bio" character varying, "location" character varying, "gender" character varying, "date_of_birth" date, "time_zone_name" character varying DEFAULT 'Asia/Kolkata' NOT NULL, "status" integer DEFAULT 1 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303094821"]]
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateParticipations (20160303100310)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (45.9ms)[0m  [1mCREATE TABLE "participations" ("id" serial primary key, "campaign_id" integer NOT NULL, "influencer_id" integer NOT NULL, "likes_count" integer, "comments_count" integer, "shares_count" integer, "views_count" integer, "clicks_count" integer, "reach_count" integer, "total_engagement" integer, "is_approved" boolean DEFAULT 'f' NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303100310"]]
+  [1m[36m (26.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateEngagements (20160303101748)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (113.5ms)[0m  [1mCREATE TABLE "engagements" ("id" serial primary key, "participation_id" integer NOT NULL, "influencer_authorization_id" integer NOT NULL, "post_content" text NOT NULL, "post_file" character varying, "post_unique_outbound_url" character varying, "post_permalink" character varying, "post_response_json" text, "likes" integer DEFAULT 0, "comments" integer DEFAULT 0, "shares" integer DEFAULT 0, "views" integer DEFAULT 0, "clicks" integer DEFAULT 0, "reach" integer DEFAULT 0, "total_engagement" integer DEFAULT 0, "performed_at" timestamp NOT NULL, "is_approved" boolean DEFAULT 'f' NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303101748"]]
+  [1m[36m (25.2ms)[0m  [1mCOMMIT[0m
+Migrating to BrandsCategories (20160303105615)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "brands_categories" ("brand_id" integer NOT NULL, "category_id" integer NOT NULL) [0m
+  [1m[35m (52.2ms)[0m  CREATE  INDEX  "index_brands_categories_on_brand_id" ON "brands_categories"  ("brand_id")
+  [1m[36m (53.3ms)[0m  [1mCREATE  INDEX  "index_brands_categories_on_category_id" ON "brands_categories"  ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303105615"]]
+  [1m[36m (24.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocialAccounts (20160411053552)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (105.2ms)[0m  [1mCREATE TABLE "social_accounts" ("id" serial primary key, "name" character varying NOT NULL, "slug" character varying NOT NULL, "icon_large_url" character varying NOT NULL, "icon_medium_url" character varying NOT NULL, "icon_small_url" character varying NOT NULL, "order_no" integer DEFAULT 0 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160411053552"]]
+  [1m[36m (21.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCampaignCreatives (20160411061211)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (120.9ms)[0m  [1mCREATE TABLE "campaign_creatives" ("id" serial primary key, "caption" character varying, "file_url" character varying, "campaign_id" integer NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (50.4ms)[0m  CREATE  INDEX  "index_campaign_creatives_on_campaign_id" ON "campaign_creatives"  ("campaign_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160411061211"]]
+  [1m[35m (23.1ms)[0m  COMMIT
+Migrating to AddDeviseToMembers (20160411135341)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (187.2ms)[0m  ALTER TABLE "members" ADD "encrypted_password" character varying DEFAULT '' NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "members" ADD "reset_password_sent_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "remember_created_at" timestamp[0m
+  [1m[35m (199.5ms)[0m  ALTER TABLE "members" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "current_sign_in_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "members" ADD "last_sign_in_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "current_sign_in_ip" inet[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "members" ADD "last_sign_in_ip" inet
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "members" ADD "confirmed_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "members" ADD "confirmation_sent_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "members" ADD "unconfirmed_email" character varying
+  [1m[36m (51.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_members_on_reset_password_token" ON "members"  ("reset_password_token")[0m
+  [1m[35m (54.0ms)[0m  CREATE UNIQUE INDEX  "index_members_on_confirmation_token" ON "members"  ("confirmation_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160411135341"]]
+  [1m[35m (19.4ms)[0m  COMMIT
+Migrating to ActsAsTaggableOnMigration (20160414140059)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (144.7ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "name" character varying) 
+  [1m[36m (111.2ms)[0m  [1mCREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "taggable_id" integer, "taggable_type" character varying, "tagger_id" integer, "tagger_type" character varying, "context" character varying(128), "created_at" timestamp) [0m
+  [1m[35m (53.9ms)[0m  CREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")
+  [1m[36m (65.0ms)[0m  [1mCREATE  INDEX  "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings"  ("taggable_id", "taggable_type", "context")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160414140059"]]
+  [1m[36m (27.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddMissingUniqueIndices (20160414140060)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (45.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+  [1m[35m (0.3ms)[0m  DROP INDEX "index_taggings_on_tag_id"
+  [1m[36m (0.3ms)[0m  [1mDROP INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context"[0m
+  [1m[35m (50.6ms)[0m  CREATE UNIQUE INDEX  "taggings_idx" ON "taggings"  ("tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160414140060"]]
+  [1m[35m (27.3ms)[0m  COMMIT
+Migrating to AddTaggingsCounterCacheToTags (20160414140061)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (158.4ms)[0m  ALTER TABLE "tags" ADD "taggings_count" integer DEFAULT 0
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36m (178.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (75.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateInfluencers (20160303094821)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (97.1ms)[0m  [1mCREATE TABLE "influencers" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying, "username" character varying, "profile_picture_url" character varying, "email" character varying, "bio" character varying, "location" character varying, "gender" character varying, "date_of_birth" date, "time_zone_name" character varying DEFAULT 'Asia/Kolkata' NOT NULL, "status" integer DEFAULT 1 NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160303094821"]]
+  [1m[36m (28.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInfluencerAuthorizations (20160419182936)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (105.5ms)[0m  [1mCREATE TABLE "influencer_authorizations" ("id" serial primary key, "provider" character varying NOT NULL, "provider_uid" character varying NOT NULL, "oauth_token" text NOT NULL, "meta" text, "influencer_id" integer NOT NULL, "social_account_id" integer NOT NULL, "deleted_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (53.8ms)[0m  CREATE  INDEX  "index_influencer_authorizations_on_influencer_id" ON "influencer_authorizations"  ("influencer_id")
+  [1m[36m (75.5ms)[0m  [1mCREATE  INDEX  "index_influencer_authorizations_on_social_account_id" ON "influencer_authorizations"  ("social_account_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160419182936"]]
+  [1m[36m (35.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'influencer_authorizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'influencers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
