@@ -1,0 +1,7 @@
+<h3>Add a new twitter post - <%= @influencer.first_name %></h3>
+
+<form enctype="multipart/form-data" action="/influencer/<%= @influencer.id %>/twitter_post/create" method="post">
+     <input type="text" name="message" placeholder="message"/>
+     <br><br>
+     <input type="submit" value="Post to Twitter" />
+ </form>

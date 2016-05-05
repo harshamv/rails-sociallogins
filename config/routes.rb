@@ -11,6 +11,7 @@ Rails.application.routes.draw do
         ) do
 
           post "auth/facebook", to: 'influencers#create'
+          post "auth/twitter", to: 'influencers_twitter#create'
       end
 
     end
@@ -20,8 +21,14 @@ Rails.application.routes.draw do
   get '/' => 'influencer#index', as: 'root'
 
   get 'influencer/:id/post' => 'post#index', as: 'post_index'
-  get 'influencer/:id/post2/:postid' => 'post#show', as: 'post_show'
   get 'influencer/:id/post/new' => 'post#new', as: 'post_new'
+  get 'influencer/:id/post/:postid' => 'post#show', as: 'post_show'
   post 'influencer/:id/post/create' => 'post#create', as: 'post_create'
+
+
+  get 'influencer/:id/twitter_post' => 'twitter_post#index', as: 'twitter_post_index'
+  get 'influencer/:id/twitter_post/new' => 'twitter_post#new', as: 'twitter_post_new'  
+  get 'influencer/:id/twitter_post/:postid' => 'twitter_post#show', as: 'twitter_post_show'
+  post 'influencer/:id/twitter_post/create' => 'twitter_post#create', as: 'twitter_post_create'
 
 end

@@ -17,6 +17,7 @@ class Api::V1::InfluencersController < Api::V1::ApiController
                     oauth_token: facebook_user_token,
                     social_account: '')
 
+    @influencer.save()
     render plain: @influencer.inspect
   end
 

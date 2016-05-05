@@ -19,8 +19,13 @@
       </td>
       <td><%= influencer.email %></td>
       <td><%= influencer.location %></td>
-      <td><%= link_to 'Add POST', post_new_path(influencer) %></td>
-      <td><%= link_to 'View POSTs', post_index_path(influencer) %></td>
+      <% if influencer.influencer_authorizations[0].provider == "facebook" %>
+        <td><%= link_to 'Add POST', post_new_path(influencer) %></td>
+        <td><%= link_to 'View POSTs', post_index_path(influencer) %></td>
+      <% elsif influencer.influencer_authorizations[0].provider == "twitter" %>
+        <td><%= link_to 'Add POST', twitter_post_new_path(influencer) %></td>
+        <td><%= link_to 'View POSTs', twitter_post_index_path(influencer) %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>

@@ -13,6 +13,12 @@ Likes:
 <% end %>
 
 <br>
+Reactions:
+<% if @post_details["reactions"]["summary"]["total_count"].present? %>
+  <%= image_tag @post_details["reactions"]["summary"]["total_count"] %>
+<% end %>
+
+<br>
 Comments:
 <% if @post_details["comments"]["summary"]["total_count"].present? %>
   <%= image_tag @post_details["comments"]["summary"]["total_count"] %>
