@@ -32,5 +32,7 @@ Rails.application.routes.draw do
   post 'influencer/:id/twitter_post/create' => 'twitter_post#create', as: 'twitter_post_create'
 
   get "auth/instagram", to: 'influencers_instagram#create'
+  get 'influencer/:id/instagram_post' => 'instagram_post#index', as: 'instagram_post_index'
+  get 'influencer/:id/instagram_post/:postid' => 'instagram_post#show', as: 'instagram_post_show'
 
 end

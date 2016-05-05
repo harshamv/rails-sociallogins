@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Bio</th>
     <th>Email</th>
     <th>Current Location</th>
     <th colspan="2">Actions</th>
@@ -17,6 +18,7 @@
         <% end %>
         <%= influencer.first_name %> <%= influencer.last_name %>
       </td>
+      <td><%= influencer.bio %></td>
       <td><%= influencer.email %></td>
       <td><%= influencer.location %></td>
       <% if influencer.influencer_authorizations[0].provider == "facebook" %>
@@ -25,6 +27,8 @@
       <% elsif influencer.influencer_authorizations[0].provider == "twitter" %>
         <td><%= link_to 'Add POST', twitter_post_new_path(influencer) %></td>
         <td><%= link_to 'View POSTs', twitter_post_index_path(influencer) %></td>
+      <% elsif influencer.influencer_authorizations[0].provider == "instagram" %>
+        <th colspan="2"><%= link_to 'View POSTs', instagram_post_index_path(influencer) %></th>    
       <% end %>
     </tr>
   <% end %>

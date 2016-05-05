@@ -1,0 +1,41 @@
+<h3>All Twitter Posts - <%= @influencer.first_name %></h3>
+
+
+<table>
+  <tr>
+    <th>Post</th>
+    <th>Analytics</th>
+  </tr>
+
+  <% @instagram_client.user_recent_media.each do |post| %>
+    <tr>
+      <td>
+        <% if post.images.standard_resolution["url"].present? %>
+          <%= image_tag post.images.standard_resolution["url"] %>
+          <br/>
+        <% end %>
+        <%= post.caption["text"] if post.caption.present? %>
+      </td>
+      <td>
+
+      Likes: <%= post.likes["count"] %><br>
+      Comments: <%= post.comments["count"] %><br>
+
+    </td>
+    </tr>
+  <% end %>
+
+</table>
+
+<style>
+  table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      width:100%;
+  }
+  th, td {
+      padding: 15px;
+      text-align: center;
+      font-weight: normal;
+  }
+</style>
