@@ -4,24 +4,23 @@
 <table>
   <tr>
     <th>Post</th>
-    <th>Analytics</th>
+    <th>Actions</th>
   </tr>
 
   <% @instagram_client.user_recent_media.each do |post| %>
     <tr>
       <td>
+        <%= post.id %><br>
+
         <% if post.images.standard_resolution["url"].present? %>
-          <%= image_tag post.images.standard_resolution["url"] %>
+          <%= image_tag post.images.standard_resolution["url"], width: 200 %>
           <br/>
         <% end %>
+
         <%= post.caption["text"] if post.caption.present? %>
       </td>
-      <td>
-
-      Likes: <%= post.likes["count"] %><br>
-      Comments: <%= post.comments["count"] %><br>
-
-    </td>
+      
+      <td><%= link_to 'View Analytics', instagram_post_show_path(@influencer.id,post.id) %></td>
     </tr>
   <% end %>
 

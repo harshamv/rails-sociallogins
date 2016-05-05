@@ -5,6 +5,18 @@ class InstagramPostController < ApplicationController
   def index
   end
 
+  def show
+    begin
+      @post_details = @instagram_client.media_item(params["postid"])
+
+    rescue Exception => exc
+       if exc.message.include?("400: invalid media id")
+         flash[:notice] = "This post is removed from Instagram"
+         redirect_to(:action => 'index')
+       end
+    end
+  end
+
   private
 
   def set_influencer

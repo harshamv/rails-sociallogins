@@ -1,0 +1,11 @@
+<%= @post_details.id %><br>
+
+<% if @post_details.images.standard_resolution["url"].present? %>
+  <%= image_tag @post_details.images.standard_resolution["url"] %>
+  <br/>
+<% end %>
+
+<%= @post_details.caption["text"] if @post_details.caption.present? %><br><br>
+
+Likes: <%= @post_details.likes["count"] %><br>
+Comments: <%= @post_details.comments["count"] %><br>

@@ -11,7 +11,16 @@ class TwitterPostController < ApplicationController
   end
 
   def show
-    @post_details = @twitter_client.status(params["postid"])
+
+    begin
+      @post_details = @twitter_client.status(params["postid"])
+
+    rescue Exception => exc
+       if exc.code == 144 && exc.message == "No status found with that ID."
+         flash[:notice] = "This tweet is removed from Twitter"
+         redirect_to(:action => 'index')
+       end
+    end
   end
 
   def new

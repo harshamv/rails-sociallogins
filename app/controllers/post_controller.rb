@@ -11,7 +11,20 @@ class PostController < ApplicationController
   end
 
   def show
-    @post_details = @client.get_object(params["postid"]+"?fields=full_picture,message,comments.limit(0).summary(true),likes.limit(0).summary(true),reactions.limit(0).summary(true),shares")
+    begin
+      @post_details = @client.get_object(params["postid"]+"?fields=full_picture,message,comments.limit(0).summary(true),likes.limit(0).summary(true),reactions.limit(0).summary(true),shares")
+
+    rescue Exception => exc
+      if exc.fb_error_code == 100 && exc.fb_error_message.include?("Unsupported get request.")
+        flash[:notice] = "This post is removed from Facebook"
+        redirect_to(:action => 'index')
+      elsif exc.fb_error_code == 190 && exc.fb_error_message.include?("Error validating access token")
+        flash[:notice] = "Session Expired..."
+        redirect_to(:action => 'index')
+      end
+
+    end
+
   end
 
   def new
