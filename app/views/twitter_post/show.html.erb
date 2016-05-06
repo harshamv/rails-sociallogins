@@ -1,4 +1,9 @@
 Tweet:
+<% if @post_details.media.present? %>
+  <br/>
+  <%= image_tag @post_details.media[0].media_url %>
+  <br/>
+<% end %>
 <%= @post_details.text %>
 <br><br>
 

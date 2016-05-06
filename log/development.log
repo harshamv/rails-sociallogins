@@ -17361,3 +17361,1615 @@ Processing by PostController#index as HTML
   [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 4]]
   Rendered post/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/4/post" for 127.0.0.1 at 2016-05-06 10:37:27 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostController#index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mInfluencer Load (0.6ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 4]]
+  Rendered post/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 318ms (Views: 238.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 10:37:28 +0530
+
+
+Started GET "/influencer/" for 127.0.0.1 at 2016-05-06 10:37:30 +0530
+Processing by InfluencerController#index as HTML
+  [1m[35mInfluencer Load (0.4ms)[0m  SELECT "influencers".* FROM "influencers"
+  [1m[36mInfluencerAuthorization Load (0.4ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 1]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 2]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 4]]
+  Rendered influencer/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/influencer/4/post/new" for 127.0.0.1 at 2016-05-06 10:37:34 +0530
+Processing by PostController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered post/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/influencer/3/twitter_post/new" for 127.0.0.1 at 2016-05-06 10:37:49 +0530
+
+SyntaxError (/home/mink7/Projects/Renil_test_projects/social_media/app/controllers/twitter_post_controller.rb:32: syntax error, unexpected keyword_end, expecting ')'
+/home/mink7/Projects/Renil_test_projects/social_media/app/controllers/twitter_post_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/twitter_post_controller.rb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/twitter_post_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.2ms)
+
+
+Started GET "/influencer/3/twitter_post/new" for 127.0.0.1 at 2016-05-06 10:37:49 +0530
+
+SyntaxError (/home/mink7/Projects/Renil_test_projects/social_media/app/controllers/twitter_post_controller.rb:32: syntax error, unexpected keyword_end, expecting ')'
+/home/mink7/Projects/Renil_test_projects/social_media/app/controllers/twitter_post_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/twitter_post_controller.rb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/twitter_post_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.3ms)
+
+
+Started GET "/influencer/3/twitter_post/new" for 127.0.0.1 at 2016-05-06 10:38:41 +0530
+Processing by TwitterPostController#new as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered twitter_post/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 24.6ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 10:39:09 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"gdgdgdgd", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.2ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/img_01.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.0ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 10:40:03 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"gdgdgdgd", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 3.8ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/img_01.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+Processing by InfluencerController#index as HTML
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT "influencers".* FROM "influencers"[0m
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 1]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 2]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 4]]
+  Rendered influencer/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 10:42:34 +0530
+
+
+Started GET "/influencer/3/twitter_post/new" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+Processing by TwitterPostController#new as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered twitter_post/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 25.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:12:25 +0530
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:12:29 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"fssfsffs", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.9ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /free-samples.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.3ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:13:34 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"fssfsffs", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 6.7ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /public/free-samples.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.4ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:14:46 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"fssfsffs", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /hpme/Projects/Renil_test_projects/social_media/public/free-samples.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.2ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:14:57 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"fssfsffs", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.1ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/Projects/Renil_test_projects/social_media/public/free-samples.jpg):
+  app/controllers/twitter_post_controller.rb:31:in `initialize'
+  app/controllers/twitter_post_controller.rb:31:in `new'
+  app/controllers/twitter_post_controller.rb:31:in `create'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.3ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:16:10 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"fssfsffs", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "influencer_authorizations" SET "social_account" = $1, "updated_at" = $2 WHERE "influencer_authorizations"."id" = $3  [["social_account", "728199712931778560,728460836939780096"], ["updated_at", "2016-05-06 05:46:12.840742"], ["id", 3]]
+  [1m[36m (60.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 2473ms (ActiveRecord: 65.7ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:16:12 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:16:13 +0530
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:17:44 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728460836939780096" for 127.0.0.1 at 2016-05-06 11:19:04 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728460836939780096"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 10470ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728199712931778560" for 127.0.0.1 at 2016-05-06 11:19:14 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728199712931778560"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 15020ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: Tweet:
+    2: <%= @post_details.text %>
+    3: <br><br>
+    4: 
+    5: Retweets:
+  app/views/twitter_post/show.html.erb:2:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195674843300'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:19:29 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728199712931778560" for 127.0.0.1 at 2016-05-06 11:19:30 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728199712931778560"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 5472ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:19:35 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728199712931778560" for 127.0.0.1 at 2016-05-06 11:19:39 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728199712931778560"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 5127ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:19:44 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728199712931778560" for 127.0.0.1 at 2016-05-06 11:19:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728199712931778560"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 5145ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:19:49 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728460836939780096" for 127.0.0.1 at 2016-05-06 11:19:51 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728460836939780096"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 5399ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:19:56 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728460836939780096" for 127.0.0.1 at 2016-05-06 11:19:56 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728460836939780096"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 7172ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:20:03 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:20:05 +0530
+
+
+Started GET "/influencer/3/twitter_post/728460836939780096" for 127.0.0.1 at 2016-05-06 11:20:08 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728460836939780096"}
+  [1m[35mInfluencer Load (0.2ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 7859ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:20:15 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/influencer/" for 127.0.0.1 at 2016-05-06 11:25:20 +0530
+Processing by InfluencerController#index as HTML
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT "influencers".* FROM "influencers"
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 1]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 2]]
+  [1m[36mInfluencerAuthorization Load (0.3ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.4ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 4]]
+  Rendered influencer/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 53ms (Views: 44.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/influencer/4/post/new" for 127.0.0.1 at 2016-05-06 11:25:27 +0530
+Processing by PostController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered post/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/influencer/" for 127.0.0.1 at 2016-05-06 11:25:58 +0530
+Processing by InfluencerController#index as HTML
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT "influencers".* FROM "influencers"
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 1]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 2]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 4]]
+  Rendered influencer/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 51ms (Views: 43.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/influencer/3/twitter_post/new" for 127.0.0.1 at 2016-05-06 11:26:01 +0530
+Processing by TwitterPostController#new as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered twitter_post/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/influencer/3/twitter_post/create" for 127.0.0.1 at 2016-05-06 11:26:06 +0530
+Processing by TwitterPostController#create as HTML
+  Parameters: {"message"=>"sample", "id"=>"3"}
+Can't verify CSRF token authenticity
+  [1m[35mInfluencer Load (0.3ms)[0m  SELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mInfluencerAuthorization Load (0.2ms)[0m  [1mSELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1[0m  [["influencer_id", 3]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "influencer_authorizations" SET "social_account" = $1, "updated_at" = $2 WHERE "influencer_authorizations"."id" = $3[0m  [["social_account", "728199712931778560,728460836939780096,728463352456830976"], ["updated_at", "2016-05-06 05:56:12.668832"], ["id", 3]]
+  [1m[35m (112.2ms)[0m  COMMIT
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 5791ms (ActiveRecord: 113.7ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:26:12 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:26:18 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1408ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:27:14 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1537ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:27:16 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:29:14 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1492ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:29:15 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:32:29 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 1496ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195522028180'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:32:58 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 1171ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195335274580'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.2ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:33:16 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.6ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 1139ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2..3)):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details["entities"] %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195475296320'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.2ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:34:47 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1193ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:37:46 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.5ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2651ms (Views: 28.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:37:52 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1440ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:37:58 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1674ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:38:14 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1172ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:38:15 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:39:15 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1202ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:39:16 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:40:03 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2198ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728460836939780096" for 127.0.0.1 at 2016-05-06 11:40:09 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728460836939780096"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 2505ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:40:12 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:40:14 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2457ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:42:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 1448ms (ActiveRecord: 3.5ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195472216100'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:43:23 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 1863ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195472216100'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:45:32 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 1291ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195479509480'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.2ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:45:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1269ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:45:56 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1578ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:45:57 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:46:21 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1301ms (Views: 16.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:46:23 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:46:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 1452ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195663674040'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.0ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:47:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.4ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 1387ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (private method `entities' called for #<Twitter::Tweet id=728463352456830976>
+Did you mean?  entities?):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.entities.media %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195483298040'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:49:34 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 10018ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: Tweet:
+    2: <%= @post_details.text %>
+    3: <br><br>
+    4: 
+    5: Retweets:
+  app/views/twitter_post/show.html.erb:2:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195526968900'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:50:06 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3072ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:50:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1502ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:50:45 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:50:59 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 1571ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `url' for [#<Twitter::Media::Photo id=728463352238776320>]:Array):
+    10: <%= @post_details.favorite_count %>
+    11: <br><br>
+    12: 
+    13: <%= @post_details.media.url %>
+  app/views/twitter_post/show.html.erb:13:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195523006560'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.9ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:51:44 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.7ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5084ms (Views: 21.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:52:01 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1490ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:52:02 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:52:57 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1168ms (Views: 26.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:54:24 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.3ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 1459ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/home/mink7/Projects/Renil_test_projects/social_media/app/views/twitter_post/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/mink7/Projects/Renil_test_projects/social_media/app/views/twitter_post/show.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/twitter_post/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/twitter_post/show.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:54:39 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 10012ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `media?' for nil:NilClass):
+    1: Tweet:
+    2: <% if @post_details.media? %>
+    3:   <br/>
+    4:   <%= @post_details.media[0].media_url %>
+    5:   <br/>
+  app/views/twitter_post/show.html.erb:2:in `_app_views_twitter_post_show_html_erb__669044386243055608_70195525906280'
+
+
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mink7/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.2ms)
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:55:11 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1631ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:12 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:55:46 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1477ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/influencer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/twitter_post.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/influencer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/twitter_post.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-06 11:55:47 +0530
+
+
+Started GET "/influencer/3/twitter_post/728463352456830976" for 127.0.0.1 at 2016-05-06 11:59:55 +0530
+Processing by TwitterPostController#show as HTML
+  Parameters: {"id"=>"3", "postid"=>"728463352456830976"}
+  [1m[36mInfluencer Load (0.2ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+Redirected to http://www.lvh.me:3000/influencer/3/twitter_post
+Completed 302 Found in 1461ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/influencer/3/twitter_post" for 127.0.0.1 at 2016-05-06 11:59:56 +0530
+Processing by TwitterPostController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInfluencer Load (0.3ms)[0m  [1mSELECT  "influencers".* FROM "influencers" WHERE "influencers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mInfluencerAuthorization Load (0.2ms)[0m  SELECT "influencer_authorizations".* FROM "influencer_authorizations" WHERE "influencer_authorizations"."influencer_id" = $1  [["influencer_id", 3]]
+  Rendered twitter_post/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.5ms)

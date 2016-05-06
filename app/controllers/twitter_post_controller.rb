@@ -1,4 +1,6 @@
 class TwitterPostController < ApplicationController
+  require 'open-uri'
+
   before_action :set_influencer
   before_action :set_client, only: [:show, :create]
 
@@ -28,7 +30,7 @@ class TwitterPostController < ApplicationController
 
   def create
     if params.key?("message") && params["message"] != ""
-      post_result = @twitter_client.update(params["message"])
+      post_result = @twitter_client.update_with_media(params["message"], open(URI.parse('http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/img_01.jpg')))
     end
 
     social_account = @influencer.influencer_authorizations[0].social_account
