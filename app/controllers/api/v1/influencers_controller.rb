@@ -9,6 +9,7 @@ class Api::V1::InfluencersController < Api::V1::ApiController
                                  date_of_birth: facebook_client.birthday,
                                  gender: facebook_client.gender,
                                  location: facebook_client.location,
+                                 no_of_friends: facebook_client.no_of_friends,
                                  profile_picture_url: facebook_client.profile_picture_url)
 
     @influencer.influencer_authorizations.build(

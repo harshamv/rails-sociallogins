@@ -39,12 +39,12 @@ class FacebookClient
     basic_information["gender"].present? ? basic_information["gender"] : "not_specified"
   end
 
-  def facebook_friend_ids
-    friends_response.map { |friend| friend["id"] }
-  end
-
   def profile_picture_url
     profile_picture_information["url"].present? ? profile_picture_information["url"] : ""
+  end
+
+  def no_of_friends
+    friends_information["total_count"].present? ? friends_information["total_count"] : ""
   end
 
   private
@@ -60,7 +60,7 @@ class FacebookClient
     return @profile_picture_information["data"]
   end
 
-  def friends_response
-    @friends_response ||= client.get_connections("me", "friends?limit=5000")
+  def friends_information
+    @friends_information = client.get_connection("me", "friends",api_version:"v2.0").raw_response["summary"]
   end
 end

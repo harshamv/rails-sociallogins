@@ -5,6 +5,7 @@ class InfluencersInstagramController < Api::V1::ApiController
     @influencer = Influencer.new(first_name: instagram_client.full_name,
                                  username: instagram_client.username,
                                  bio: instagram_client.bio,
+                                 no_of_friends: instagram_client.counts.followed_by,
                                  profile_picture_url: instagram_client.profile_picture)
 
     @influencer.influencer_authorizations.build(

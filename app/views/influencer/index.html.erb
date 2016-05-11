@@ -6,6 +6,8 @@
     <th>Bio</th>
     <th>Email</th>
     <th>Current Location</th>
+    <th>Provider</th>
+    <th>Connections</th>
     <th colspan="2">Actions</th>
   </tr>
 
@@ -21,14 +23,18 @@
       <td><%= influencer.bio %></td>
       <td><%= influencer.email %></td>
       <td><%= influencer.location %></td>
+      <td><%= influencer.influencer_authorizations[0].provider %></td>
       <% if influencer.influencer_authorizations[0].provider == "facebook" %>
+        <td><%= influencer.no_of_friends %> Friends</td>
         <td><%= link_to 'Add POST', post_new_path(influencer) %></td>
         <td><%= link_to 'View POSTs', post_index_path(influencer) %></td>
       <% elsif influencer.influencer_authorizations[0].provider == "twitter" %>
+        <td><%= influencer.no_of_friends %> Followers</td>
         <td><%= link_to 'Add POST', twitter_post_new_path(influencer) %></td>
         <td><%= link_to 'View POSTs', twitter_post_index_path(influencer) %></td>
       <% elsif influencer.influencer_authorizations[0].provider == "instagram" %>
-        <th colspan="2"><%= link_to 'View POSTs', instagram_post_index_path(influencer) %></th>    
+        <td><%= influencer.no_of_friends %> Followers</td>
+        <th colspan="2"><%= link_to 'View POSTs', instagram_post_index_path(influencer) %></th>
       <% end %>
     </tr>
   <% end %>

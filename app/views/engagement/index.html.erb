@@ -1,0 +1,29 @@
+<h3>List of Test Images</h3>
+
+<table>
+  <tr>
+    <th>File</th>
+    <th>Content</th>
+  </tr>
+
+  <% @engagements.each do |engagement| %>
+    <tr>
+      <td><%= image_tag engagement.post_file, width:300 %></td>
+      <td><%= engagement.post_content %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<style>
+  table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      width:100%;
+  }
+  th, td {
+      padding: 15px;
+      text-align: center;
+      font-weight: normal;
+  }
+</style>

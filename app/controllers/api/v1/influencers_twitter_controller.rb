@@ -5,6 +5,7 @@ class Api::V1::InfluencersTwitterController < Api::V1::ApiController
     @influencer = Influencer.new(first_name: twitter_client.name,
                                  bio: twitter_client.description,
                                  location: twitter_client.location,
+                                 no_of_friends: twitter_client.followers_count,
                                  profile_picture_url: twitter_client.profile_background_image_url)
 
     @influencer.influencer_authorizations.build(

@@ -35,4 +35,6 @@ Rails.application.routes.draw do
   get 'influencer/:id/instagram_post' => 'instagram_post#index', as: 'instagram_post_index'
   get 'influencer/:id/instagram_post/:postid' => 'instagram_post#show', as: 'instagram_post_show'
 
+  post 'test_upload' => 'engagement#create', as: 'test_upload'
+  get 'engagements' => 'engagement#index', as: 'engagements'
 end

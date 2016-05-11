@@ -10,6 +10,7 @@ class CreateInfluencers < ActiveRecord::Migration
       t.string :location
       t.string :gender
       t.date :date_of_birth
+      t.string :no_of_friends
       t.string :time_zone_name, default: 'Asia/Kolkata', null: false
       t.integer :status, default: 1, null: false
       t.datetime :deleted_at
