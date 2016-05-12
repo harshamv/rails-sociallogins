@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  require 'sidekiq/web'
+  # require 'sidekiq/cron/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   # API Routes
   constraints :subdomain => "api" do
     scope :module => "api", :as => "api" do

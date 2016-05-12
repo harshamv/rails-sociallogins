@@ -39,6 +39,11 @@ gem 'twitter'
 gem 'instagram'
 gem 'carrierwave'
 
+gem 'sidekiq'
+#gem "sidekiq-cron", "~> 0.4.0"
+gem 'sinatra', :require => nil
+gem 'whenever', :require => false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
