@@ -39,6 +39,8 @@ gem 'twitter'
 gem 'instagram'
 gem 'carrierwave'
 
+gem 'razorpay'
+
 gem 'sidekiq'
 #gem "sidekiq-cron", "~> 0.4.0"
 gem 'sinatra', :require => nil
@@ -55,4 +57,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'knife-solo', '~> 0.4.2'
+
+  gem "capistrano", "~> 3.4"
+  gem "capistrano-rails"
+  gem "capistrano-bundler"
+  gem "capistrano-rbenv"
 end

@@ -6,3 +6,7 @@
 /public/assets
 /.idea
 .byebug_history
+
+/spec/support/uploads/*
+
+/config/chef/nodes/139.59.15.9.json

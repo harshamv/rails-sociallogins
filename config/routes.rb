@@ -21,6 +21,10 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'payment/new' => 'payments#new', as: 'new_payment'
+  post 'payment/create' => 'payments#create', as: 'create_payment'
+
+
   match 'influencer' => 'influencer#index', :via => :get
   get '/' => 'influencer#index', as: 'root'
 
@@ -41,4 +45,8 @@ Rails.application.routes.draw do
 
   post 'test_upload' => 'engagement#create', as: 'test_upload'
   get 'engagements' => 'engagement#index', as: 'engagements'
+
+
+  post 'test_upload_new' => 'samples#index', as: 'test_upload_new'
+
 end

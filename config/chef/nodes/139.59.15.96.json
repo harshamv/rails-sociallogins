@@ -1,0 +1,28 @@
+{
+  "run_list": [
+  "recipe[social_media]",
+  "recipe[social_media::users]",
+  "recipe[social_media::ssh]",
+  "recipe[social_media::postgres]",
+  "recipe[social_media::rbenv]",
+  "recipe[social_media::redis]",
+  "recipe[social_media::nginx]",
+  "recipe[social_media::app]"
+  ],
+
+  "group": "test",
+  "port": 22,
+
+  "user": {
+    "name": "renil",
+    "password": "$1$F01dPH.5$SndGuDRbjAav8p.HNzFM.1"
+  },
+
+  "db": {
+    "root_password": "password",
+    "user": {
+      "name": "renil",
+      "password": "password"
+    }
+  }
+}
