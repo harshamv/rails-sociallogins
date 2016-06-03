@@ -60,7 +60,15 @@ group :development do
 
   gem 'knife-solo', '~> 0.4.2'
 
-  gem "capistrano"
-
+  gem "capistrano", "~> 3.1.0"
   gem 'unicorn'
+
+
+  # rails specific capistrano funcitons
+  gem 'capistrano-rails', '~> 1.1.0'
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler'
+  # if you are using RBENV
+  gem 'capistrano-rbenv', "~> 2.0"
+
 end
