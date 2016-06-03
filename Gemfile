@@ -60,8 +60,7 @@ group :development do
 
   gem 'knife-solo', '~> 0.4.2'
 
-  gem "capistrano", "~> 3.4"
-  gem "capistrano-rails"
-  gem "capistrano-bundler"
-  gem "capistrano-rbenv"
+  gem "capistrano"
+
+  gem 'unicorn'
 end

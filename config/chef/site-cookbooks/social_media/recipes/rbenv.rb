@@ -28,7 +28,7 @@ bash 'install ruby' do
     export PATH="${RBENV_ROOT}/bin:${PATH}"
     rbenv init -
 
-    rbenv install #{node['ruby']['version']}
+    rbenv install -v #{node['ruby']['version']}
     rbenv global #{node['ruby']['version']}
     echo 'gem: -–no-ri -–no-rdoc' > .gemrc
     .rbenv/bin/rbenv exec gem install bundler

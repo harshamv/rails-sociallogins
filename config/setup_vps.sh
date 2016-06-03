@@ -15,10 +15,10 @@ PORT=$3
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@$IP
 
 # install chef
-cd ./chef && knife solo prepare root@$IP
+cd ./config/chef && knife solo prepare root@$IP -P "B2mfLg^WeJ6W]hw8b\Y[g%"
 
 # execute the run list
-knife solo cook root@$IP
+knife solo cook root@$IP -P "B2mfLg^WeJ6W]hw8b\Y[g%"
 
 # upload key for user
 ssh-copy-id -i ~/.ssh/id_rsa.pub -p $PORT $USER@$IP

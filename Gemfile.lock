@@ -37,25 +37,21 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    airbrussh (1.0.2)
+      sshkit (>= 1.6.1, != 1.7.0)
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     buftok (0.2.0)
     builder (3.2.2)
     byebug (8.2.5)
-    capistrano (3.4.0)
+    capistrano (3.5.0)
+      airbrussh (>= 1.0.0)
+      capistrano-harrow
       i18n
       rake (>= 10.0.0)
-      sshkit (~> 1.3)
-    capistrano-bundler (1.1.4)
-      capistrano (~> 3.1)
-      sshkit (~> 1.2)
-    capistrano-rails (1.1.6)
-      capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
-    capistrano-rbenv (2.0.4)
-      capistrano (~> 3.1)
-      sshkit (~> 1.3)
+      sshkit (>= 1.9.0)
+    capistrano-harrow (0.5.1)
     carrierwave (0.11.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -153,6 +149,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kgio (2.10.0)
     knife-solo (0.4.3)
       chef (>= 10.12)
       erubis (~> 2.7.0)
@@ -243,6 +240,7 @@ GEM
       activesupport (= 4.2.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    raindrops (0.16.0)
     rake (11.1.2)
     razorpay (1.1.0)
       httparty (~> 0.13)
@@ -306,7 +304,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.8.1)
+    sshkit (1.10.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     syslog-logger (1.6.8)
@@ -334,6 +332,9 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
+    unicorn (5.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     uuidtools (2.1.5)
     versionist (1.4.1)
       activesupport (>= 3)
@@ -354,10 +355,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano (~> 3.4)
-  capistrano-bundler
-  capistrano-rails
-  capistrano-rbenv
+  capistrano
   carrierwave
   coffee-rails (~> 4.1.0)
   instagram
@@ -376,6 +374,7 @@ DEPENDENCIES
   turbolinks
   twitter
   uglifier (>= 1.3.0)
+  unicorn
   versionist
   web-console (~> 2.0)
   whenever
